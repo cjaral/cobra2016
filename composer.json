@@ -1,8 +1,15 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "carlosjaral/cobra2016",
     "license": "MIT",
+	"authors":[
+		{
+			"name": "Carlos Jara Leyton",
+			"email": "jara.gt@gmail.com",
+			"role": "Developer"
+		}
+	],
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "Sistema de Cobranza",
     "autoload": {
         "psr-4": { "": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
