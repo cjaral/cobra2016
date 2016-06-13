@@ -100,6 +100,38 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // my_bundles_my_test_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'my_bundles_my_test_homepage');
+            }
+
+            return array (  '_controller' => 'MyBundles\\MyTestBundle\\Controller\\DefaultController::indexAction',  '_route' => 'my_bundles_my_test_homepage',);
+        }
+
+        // recipes
+        if (0 === strpos($pathinfo, '/recetas') && preg_match('#^/recetas/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'recipes')), array (  '_controller' => 'MyBundles\\MyTestBundle\\Controller\\DefaultController::testAction',));
+        }
+
+        // acme_hello_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'acme_hello_homepage');
+            }
+
+            return array (  '_controller' => 'Acme\\HelloBundle\\Controller\\DefaultController::indexAction',  '_route' => 'acme_hello_homepage',);
+        }
+
+        // test_homepage
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'test_homepage');
+            }
+
+            return array (  '_controller' => 'TestBundle\\Controller\\DefaultController::indexAction',  '_route' => 'test_homepage',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

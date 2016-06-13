@@ -1,6 +1,6 @@
 <?php
 
-/* :default:index.html.twig */
+/* default/index.html.twig */
 class __TwigTemplate_84f7b1797ad43e964b2b03c2d394b6523ba6fed76aa7196f86a21b6aa4e39905 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -8,7 +8,7 @@ class __TwigTemplate_84f7b1797ad43e964b2b03c2d394b6523ba6fed76aa7196f86a21b6aa4e
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", ":default:index.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "default/index.html.twig", 1);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
             'stylesheets' => array($this, 'block_stylesheets'),
@@ -119,7 +119,7 @@ class __TwigTemplate_84f7b1797ad43e964b2b03c2d394b6523ba6fed76aa7196f86a21b6aa4e
 
     public function getTemplateName()
     {
-        return ":default:index.html.twig";
+        return "default/index.html.twig";
     }
 
     public function isTraitable()

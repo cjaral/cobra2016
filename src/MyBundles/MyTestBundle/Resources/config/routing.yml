@@ -1,0 +1,7 @@
+my_bundles_my_test_homepage:
+    path:     /
+    defaults: { _controller: MyBundlesMyTestBundle:Default:index }
+
+recipes:
+    path:     /recetas/{id}
+    defaults: { _controller: MyBundlesMyTestBundle:Default:test }

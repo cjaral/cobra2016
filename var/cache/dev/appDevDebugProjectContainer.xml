@@ -16,6 +16,9 @@
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
+      <parameter key="TestBundle">TestBundle\TestBundle</parameter>
+      <parameter key="AcmeHelloBundle">Acme\HelloBundle\AcmeHelloBundle</parameter>
+      <parameter key="MyBundlesMyTestBundle">MyBundles\MyTestBundle\MyBundlesMyTestBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -1493,7 +1496,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>575831cb5073c6.47342060</argument>
+            <argument>57588cd0da67d3.98941766</argument>
           </service>
         </argument>
       </argument>
@@ -1622,7 +1625,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>575831cb5073c6.47342060</argument>
+            <argument>57588cd0da67d3.98941766</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2407,6 +2410,18 @@
       <call method="addPath">
         <argument>/var/www/html/curso/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
+      </call>
+      <call method="addPath">
+        <argument>/var/www/html/curso/src/TestBundle/Resources/views</argument>
+        <argument>Test</argument>
+      </call>
+      <call method="addPath">
+        <argument>/var/www/html/curso/src/Acme/HelloBundle/Resources/views</argument>
+        <argument>AcmeHello</argument>
+      </call>
+      <call method="addPath">
+        <argument>/var/www/html/curso/src/MyBundles/MyTestBundle/Resources/views</argument>
+        <argument>MyBundlesMyTest</argument>
       </call>
       <call method="addPath">
         <argument>/var/www/html/curso/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
