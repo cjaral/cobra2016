@@ -1,0 +1,18 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: carlos.jara
+ * Date: 30-06-2016
+ * Time: 17:20
+ */
+
+namespace MyBundles\MyTestBundle\Entity;
+
+
+class Recipe
+{
+    private $id;
+    protected $name;
+    protected $difficulty;
+    protected $description;
+}

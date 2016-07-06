@@ -1,0 +1,16 @@
+MyBundles\MyTestBundle\Entity\Recipe:
+    type: entity
+    table: recipes
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        name:
+            type: string
+            length: 255
+        difficulty:
+            type: string
+            length: 40
+        description:
+            type: text

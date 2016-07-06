@@ -111,7 +111,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         // recipes
         if (0 === strpos($pathinfo, '/recetas') && preg_match('#^/recetas/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'recipes')), array (  '_controller' => 'MyBundles\\MyTestBundle\\Controller\\DefaultController::testAction',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'recipes')), array (  '_controller' => 'MyBundles\\MyTestBundle\\Controller\\DefaultController::createAction',));
         }
 
         // acme_hello_homepage

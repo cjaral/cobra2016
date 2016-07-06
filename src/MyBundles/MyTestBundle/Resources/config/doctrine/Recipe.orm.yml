@@ -1,0 +1,37 @@
+MyBundles\MyTestBundle\Entity\Recipe:
+    type: entity
+    table: recipes
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        name:
+            type: string
+            length: 255
+        difficulty:
+            type: string
+            length: 40
+        description:
+            type: text
+    manyToOne:
+        author:
+            targetEntity: Author
+            inversedBy: recipes
+            joinColumn:
+                onDelete: "CASCADE"
+                name: author_id
+                referencedColumnName: id
+            cascade: ["persist"]
+    manyToMany:
+        ingredients:
+            targetEntity: Ingredient
+            joinTable:
+                name: recipe_ingredients
+                joinColumns:
+                    recipe_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    ingredient_id:
+                        referencedColumnName: id
+            cascade: ["persist"]

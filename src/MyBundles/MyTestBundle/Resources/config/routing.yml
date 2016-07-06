@@ -4,4 +4,4 @@ my_bundles_my_test_homepage:
 
 recipes:
     path:     /recetas/{id}
-    defaults: { _controller: MyBundlesMyTestBundle:Default:test }
+    defaults: { _controller: MyBundlesMyTestBundle:Default:create }

@@ -1,0 +1,23 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: carlos.jara
+ * Date: 01-07-2016
+ * Time: 16:25
+ */
+
+namespace MyBundles\MyTestBundle\Entity;
+
+
+class Author
+{
+    private $id;
+    protected $name;
+    protected $surname;
+
+
+    public function __construct($name, $surname){
+        $this->name=$name;
+        $this->surname=$surname;
+    }
+}
