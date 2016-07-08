@@ -1,0 +1,19 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: carlos.jara
+ * Date: 07-07-2016
+ * Time: 16:25
+ */
+
+namespace MyBundles\MyTestBundle\Entity;
+
+
+class User
+{
+    private $id;
+    protected $userName;
+    protected $password;
+    protected $name;
+
+}
